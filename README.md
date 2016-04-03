@@ -46,7 +46,13 @@ Github Project : https://github.com/pipa0979/HackCU-UX
 *OfficeBot* is created as a real-time office assistant AI program which can handle day-to-day office tasks through an *simplistic easy-to-use interface*.
 
 ###Screenshots
+##### Home Page
 ![alt tag](https://github.com/tapa8728/HackCU-UX/blob/master/screenshot.png)
+
+##### The API's we referenced
+![alt tag](https://github.com/tapa8728/HackCU-UX/blob/master/screenshot2.png)
+
+
 
 
 
