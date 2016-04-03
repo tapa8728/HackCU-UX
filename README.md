@@ -37,7 +37,6 @@ Github Project : https://github.com/pipa0979/HackCU-UX
 
 7. **Tweets** : Post Tweets straight from your OfficeBot Interface by using a simple command "Tweet <tweet>"
 
-
 8. **Weather** : OfficeBot fetches latest weather updates from OpenWeather API. (e.g. command : "How is the weather outside?")
 
 9. **Wikipedia** : Users can find information on any topic by querying OfficeBot "wiki <topic>". OfficeBot talks to wikipedia API to get a brief summary about the topic.
@@ -45,6 +44,9 @@ Github Project : https://github.com/pipa0979/HackCU-UX
 10. Few other features such as **'Word-Meanings', 'Synonyms', 'Antonyms'**.
 
 *OfficeBot* is created as a real-time office assistant AI program which can handle day-to-day office tasks through an *simplistic easy-to-use interface*.
+
+###Screenshots
+![alt tag](https://github.com/tapa8728/HackCU-UX/blob/master/screenshot.png)
 
 
 
