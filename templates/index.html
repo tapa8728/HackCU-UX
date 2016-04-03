@@ -1,0 +1,86 @@
+
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+		<script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<!-- Basscss -->
+		<link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
+		<script src="js/typed.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<script type="text/javascript">
+			$(document).ready(function(){
+				  $(document).mousemove(function(e){
+				     TweenLite.to($('body'), 
+				        .5, 
+				        { css: 
+				            {
+				                backgroundPosition: ""+ parseInt(event.pageX/8) + "px "+parseInt(event.pageY/'12')+"px, "+parseInt(event.pageX/'15')+"px "+parseInt(event.pageY/'15')+"px, "+parseInt(event.pageX/'30')+"px "+parseInt(event.pageY/'30')+"px"
+				            }
+				        });
+				  });
+
+				  // for the typed effect
+				  $("#typed").typed({
+			            stringsElement: $('#typed-strings'),
+			            typeSpeed: 28,
+			            backDelay: 500,
+			            loop: false,
+			            contentType: 'html', // or text
+			            // defaults to false for infinite loop
+			            showCursor: true,
+			            cursorChar: "|",
+			            loopCount: false,
+			            callback: function(){ foo(); },
+			            resetCallback: function() { newTyped(); }
+			        });
+
+			        $(".reset").click(function(){
+			            $("#typed").typed('reset');
+			        });
+				
+				});
+		
+		</script>
+	</head>
+
+	<body>
+		<h1> OFFICE BOT </h1>
+
+		<div class="wrap">
+	        <div class="center">
+	            <div id="typed-strings">
+	                <p>OfficeBot is your <strong>Personal Bot</strong></p>
+	                <p>It <em>works</em> for you</p>
+	                <p>Call an <em>uber</em> ... </p>
+	                <p>Pizza .. </p>
+	                <p>Send a <em>quick</em> email .. </p>
+	                <p>Weather updates.. </p>
+	                <p>OfficeBot is your <em>go-to</em> pal...</p>
+	            </div>
+	            <span id="typed"></span>
+	        </div>
+  		</div>
+		
+    	<div class="row row-centered vertical-offset-100">
+    	<div class="col-md-6 col-centered col-md-offset-3">
+    		<div class="panel panel-default">
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" role="form">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="Question" name="question" type="text">
+			    		</div>
+			    		
+			    	</fieldset>
+			      	</form>
+			      	<input class="left btn btn-lg btn-success" type="submit" value="Login">
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+	</body>
+</html>

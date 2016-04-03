@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Office Bot</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+    <script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Basscss -->
+    <link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
+    <!-- For typing-->
+    <script src="{{ url_for('static', filename='js/midnight.jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrollify.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/typed.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/terminal.js') }}"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylish-portfolio.css') }}" > 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica' rel='stylesheet' type='text/css'>
+   <script type="text/javascript">
+            $(document).ready(function(){
+                    var myTerminal = new Terminal()
+                    myTerminal.setWidth("600px")
+                    myTerminal.setHeight("250px")
+                    myTerminal.blinkingCursor(true)
+                    $("#response").append(myTerminal.html)
+
+                    myTerminal.sleep(2000, function () {
+                            myTerminal.print("> waiting for a question ..")
+                    });
+
+                    $(document).mousemove(function(e){
+                     TweenLite.to($('body'), 
+                        .5, 
+                        { css: 
+                            {
+                                backgroundPosition: ""+ parseInt(event.pageX/8) + "px "+parseInt(event.pageY/'12')+"px, "+parseInt(event.pageX/'15')+"px "+parseInt(event.pageY/'15')+"px, "+parseInt(event.pageX/'30')+"px "+parseInt(event.pageY/'30')+"px"
+                            }
+                        });
+                    });
+
+                  // for the typed effect
+                  $("#typed").typed({
+                        stringsElement: $('#typed-strings'),
+                        typeSpeed: 28,
+                        backDelay: 500,
+                        loop: false,
+                        contentType: 'html', // or text
+                        // defaults to false for infinite loop
+                        showCursor: true,
+                        cursorChar: "|",
+                        loopCount: false,
+                        
+                    });
+
+                    $(".reset").click(function(){
+                        $("#typed").typed('reset');
+                    });
+
+                    // For the scrolling effect
+                    $.scrollify({
+                        section : "section",
+                        sectionName : "top",
+                        easing: "easeOutExpo",
+                        scrollSpeed: 1100,
+                        offset : 0,
+                        scrollbars: true,
+                        standardScrollElements: "",
+                        setHeights: true                        
+                    });
+
+                    // For the midnight.js header
+                    $('nav.navbar-fixed-bottom').midnight();
+                                 
+                });
+    </script>
+</head>
+
+<body>
+        <nav class="navbar-fixed-bottom">
+            <div class="midnightHeader default">
+              <h1 class="logo">OfficeBot</h1>
+            </div>
+        </nav>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <br><br>
+    <section id="top" class="header" data-midnight="red">
+        <div class="wrap">
+            <div class="center">
+                <div id="typed-strings">
+                    <p>OfficeBot is your <strong>Personal Bot</strong></p>
+                    <p>It <em>works</em> for you</p>
+                    <p>Call a <em>friend</em> ... </p>
+                    <p>Headlines .. </p>
+                    <p>Send a <em>quick</em> email .. </p>
+                    <p>Weather updates.. </p>
+                    <p>OfficeBot is your <em>go-to</em> pal...</p>
+                </div>
+                <span id="typed"></span>
+            </div>
+        </div>
+        
+        <div class="row row-centered vertical-offset-100">
+            <div class="col-md-6 col-centered col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form accept-charset="UTF-8" role="form" action="" method="post">
+                        
+                            <div class="form-group">
+                                <input class="form-control input-lg" placeholder="Question" name="question" id="question" type="text" value="{{request.form.question}}">
+                            </div>
+                         <input class="right btn btn-lg" type="submit" value="Ask OfficeBot">
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+        <div id="response">
+            <br>
+            <!-- <div class="panel panel-default">
+                    <div class="panel-body">
+                          {% if answer %}
+                              <h1 style="color:blue;">The answer is -  {{ answer }}!</h1>
+                            {% else %}
+                              <h1 style="color:red;">There is no answer</h1>
+                            {% endif %}              
+                    </div>
+                </div> -->
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about" data-midnight="white">
+        <div class="container">
+            <div class="row">
+                <br><br>
+                <div class="col-lg-12 text-center">
+                    <h2>Search, Tweet, Text, Chat & humour yourself !</h2>
+                    <p class="lead"> With <strong>OfficeBot</strong> you have tremendous power at your key-taps. </p>
+                    <hr>
+                    <p class="qa"> <strong> What's the weather today? </strong> </p>
+                    <p class="qa"> <i> It is windy in Boulder today</i><p>
+                        <i class="fa fa-pagelines"></i>
+                    <p class="qa"> <strong> Give me the latest news. </strong> </p>
+                    <p class="qa"> <i> The news for today are <a>ABC</a>, <a>XYZ</a> </i><p>
+                        <i class="fa fa-pagelines"></i>
+                    <p class="qa"> <strong> Text <i>720598632</i> </strong> </p>
+                    <p class="qa"> <i> Okay. Enter your text below.</i><p>
+                    <p class="qa"> <strong> Sandra, i cant make dinner 2nite </strong> </p>
+                    <p class="qa"> <i> Text is sent! </i><p>
+                        <i class="fa fa-pagelines"></i>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary" data-midnight="green">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <br><br><br>
+                    <div id="row1" class="row" >
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-twitter fa-stack-2x"></i>
+                                
+                            </span>
+                                <h4>
+                                    <strong>Twitter Inc.</strong>
+                                </h4>
+                                <p>Let <i>OfficeBot</i> post tweets on your behalf</p>
+                                <a href="https://twitter.com/" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-wikipedia-w fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Wikipedia</strong>
+                                </h4>
+                                <p>Get a mini definition from trusted wiki and impress your boss</p>
+                                <a href="https://wikipedia.org/" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-mobile fa-stack-2x"></i>
+                                
+                            </span>
+                                <h4>
+                                    <strong>Twilio</strong>
+                                </h4>
+                                <p>Send <i>texts</i> and place <i>calls</i> in minimal key-strokes.</p>
+                                <a href="https://twilio.com" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Gmail</strong>
+                                </h4>
+                                <p>Send <i>email</i> without taking eyes of our beautiful interface</p>
+                                <a href="https://gmail.com" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <div id="row2" class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tasks fa-stack-1x text-primary"></i>
+                           </span>
+                                <h4>
+                                    <strong>To-do Tasks</strong>
+                                </h4>
+                                <p><i>OfficeBot</i> will do its best to keep you <i>organized</i> and <i>on-time</i></p>
+                                <a href="https://dictionary.com/" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-newspaper-o fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>The Guardian</strong>
+                                </h4>
+                                <p>Latest updates, headlines for your daily dose of reality-bites</p>
+                                <a href="https://wikipedia.org/" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-sun-o fa-stack-2x"></i>
+                                
+                            </span>
+                                <h4>
+                                    <strong>Weather.com</strong>
+                                </h4>
+                                <p>Send <i>texts</i> and place <i>calls</i> in minimal key-strokes.</p>
+                                <a href="https://twilio.com" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                
+                            </span>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+     <!-- Footer -->        
+    <section id="footer">        
+        <div class="container ">     
+            <div id="row3" class="row">       
+                <div class="col-lg-10 col-lg-offset-1 text-center">     
+                        <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                
+                                <h4 id="we">
+                                    Piyush Patel
+                                </h4>
+                                <h3>Enthusiastic - <strong>95%</strong></h3>
+                                <h3>Fiesty - <strong>5%</strong></h3>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                
+                                <h4 id="we">
+                                    Tanvi Parikh
+                                </h4>
+                                <h3>Creative - <strong>80%</strong></h3>
+                                <h3>Chill - <strong>20%</strong></h3>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <h4 id="we">
+                                    Tushar Singh
+                                </h4>
+                                <h3>Practical - <strong>85%</strong></h3>
+                                <h3>Hungry - <strong>15%</strong></h3>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>   
+                    <br>
+                    <hr>       
+                    <ul class="list-inline">        
+                        <li>        
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>      
+                        </li>       
+                        <li>        
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>       
+                        </li>       
+                        <li>        
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>      
+                        </li>       
+                    </ul>       
+                    <hr class="small">      
+                    <p class="text-muted">Copyright &copy; OfficeBot 2016</p>        
+                </div>      
+            </div>      
+        </div>      
+    </section>
+       
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>

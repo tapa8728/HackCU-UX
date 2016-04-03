@@ -1,0 +1,162 @@
+body{
+    background: url(http://mymaplist.com/img/parallax/back.png);
+	background-color: #444;
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+}
+
+
+.vertical-offset-100{
+    padding-top:150px;
+}
+
+.panel {
+	background-color: transparent;
+}
+
+.form-control{
+	background-color: transparent;
+    font-family: "Consolas", "Courier New", "Courier";
+    font-size: 1.5em;
+	color: white;
+}
+
+/* Fot the typing part */
+/* code for animated blinking cursor */
+.typed-cursor{
+    position: relative;
+    top: 150px;
+    opacity: 1;
+    font-weight: 100;
+    color: yellow;
+    font-family: "Consolas", "Courier New", "Courier";
+    font-size: 2.5em;
+    text-shadow: #b2b200 0px 1px 0px;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-ms-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+#typed {
+    position: relative;
+    text-align: center;
+	color: yellow;
+    font-family: "Consolas", "Courier New", "Courier";
+    font-size: 2.5em;
+    text-shadow: #b2b200 0px 1px 0px;
+    top: 150px;
+}
+
+/* Midnight.js stuff*/
+.logo {
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 5em;
+}
+
+#response{
+    position: relative;
+   left:360px;
+}
+
+#row2{
+    position: relative;
+    left:100px;
+}
+
+#services {
+    min-height: 100%; clear:both; height:inherit; width:inherit;
+
+}
+
+.bg-primary{
+    background-color: #8E44AD;
+}
+.midnightHeader.default {
+  background: transparent;
+  color: black;
+  font-size: 2em;
+
+}
+.midnightHeader.white {
+background: transparent;
+  color: #8E44AD;
+
+}
+.midnightHeader.red {
+    background: transparent;
+    color: white;
+    font-size: 2em;
+}
+.midnightHeader.green {
+    background: transparent;
+    color: white;
+    font-size: 1.5em;
+}
+.h1{
+    text-align: center;
+    font-style: 
+}
+
+.panel{
+  border:none;
+  padding:0;
+}
+.panel-heading{
+  border:0px solid #ccc;
+  padding:10px;
+  margin:0;
+}
+.panel-body{
+  border:0px solid #ccc;
+  padding:10px;
+  border-top:0;
+}
+
+.qa {
+    font-size: 1.35em;
+}
+
+#footer {
+    background-color: white;
+}
+
+#row3{
+    position: relative;
+    top:220px
+}
+
+#we{
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 3.2em;
+    color: #DF3A01;
+}
+
+/* For terminal output*/
