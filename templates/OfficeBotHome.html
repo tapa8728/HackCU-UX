@@ -27,16 +27,7 @@
     <link href='https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica' rel='stylesheet' type='text/css'>
    <script type="text/javascript">
             $(document).ready(function(){
-                    var myTerminal = new Terminal()
-                    myTerminal.setWidth("600px")
-                    myTerminal.setHeight("250px")
-                    myTerminal.blinkingCursor(true)
-                    $("#response").append(myTerminal.html)
-
-                    myTerminal.sleep(2000, function () {
-                            myTerminal.print("> waiting for a question ..")
-                    });
-
+                    
                     $(document).mousemove(function(e){
                      TweenLite.to($('body'), 
                         .5, 
@@ -118,7 +109,7 @@
     </nav>
 
     <!-- Header -->
-    <br><br>
+    <br><br><br>
     <section id="top" class="header" data-midnight="red">
         <div class="wrap">
             <div class="center">
@@ -134,6 +125,7 @@
                 <span id="typed"></span>
             </div>
         </div>
+        <br><br><br>
         
         <div class="row row-centered vertical-offset-100">
             <div class="col-md-6 col-centered col-md-offset-3">
@@ -152,21 +144,21 @@
             </div>
         </div>
 
-        
-
-
-        <div id="response">
-            <br>
-            <!-- <div class="panel panel-default">
+         <div class="row row-centered vertical-offset-100">
+            <div class="col-md-6 col-centered col-md-offset-3">
+                <div class="panel panel-default bayw">
                     <div class="panel-body">
-                          {% if answer %}
-                              <h1 style="color:blue;">The answer is -  {{ answer }}!</h1>
+                        {% if answer %}
+                              <h3 style="color:white;"> <strong>OfficeBot:~ &nbsp;&nbsp; </strong><i>{{ answer }}!</i></h3>
                             {% else %}
-                              <h1 style="color:red;">There is no answer</h1>
-                            {% endif %}              
+                              <h3 style="color:white;"> > waiting for a question ..</h3>
+                            {% endif %} 
+                        
                     </div>
-                </div> -->
+                </div>
+            </div>
         </div>
+        
     </section>
 
     <!-- About -->

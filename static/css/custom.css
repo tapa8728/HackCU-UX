@@ -24,7 +24,7 @@ body{
 /* code for animated blinking cursor */
 .typed-cursor{
     position: relative;
-    top: 150px;
+    top: 170px;
     opacity: 1;
     font-weight: 100;
     color: yellow;
@@ -70,7 +70,7 @@ body{
     font-family: "Consolas", "Courier New", "Courier";
     font-size: 2.5em;
     text-shadow: #b2b200 0px 1px 0px;
-    top: 150px;
+    top: 170px;
 }
 
 /* Midnight.js stuff*/
@@ -139,6 +139,10 @@ background: transparent;
   border-top:0;
 }
 
+.bayw {
+    background-color: black;
+}
+
 .qa {
     font-size: 1.35em;
 }
@@ -160,3 +164,8 @@ background: transparent;
 }
 
 /* For terminal output*/
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 2px 2px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    outline: 0 none;
+}
