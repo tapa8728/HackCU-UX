@@ -52,7 +52,9 @@ Github Project : https://github.com/pipa0979/HackCU-UX
 ##### The API's we referenced
 ![alt tag](https://github.com/tapa8728/HackCU-UX/blob/master/screenshot2.png)
 
+##### Some examples of what **OfficeBot** does
+![alt tag](https://github.com/tapa8728/HackCU-UX/blob/master/screen3.png)
 
-
-
+##### <**Drumroll**>And we take a bow! We had a blast coding this up at Hack CU 2016!!
+![alt tag](https://github.com/tapa8728/HackCU-UX/blob/master/screenshot3.png)
 
