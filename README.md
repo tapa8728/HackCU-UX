@@ -4,8 +4,17 @@
 
 This project implements **OfficeBot** - a personal office assistant bot. 
 
-Through a simplified interface, Natural Language Support and easy-to-use one line commands it can take care of your emails, social accounts, calls, To-do tasks , News & Weather Info etc. OfficeBot employs APIs like Twilio, Google, OpenWeather API ,
-Guardian API, Twitter API, Wikipedia API and few others to perform your mundane day-to-day office tasks. The OfficeBot uses basic NLP techniques and **AIML(Artificial Intelligence Markup Language)** to understand natural languages better.
+Through a simplified interface, Natural Language Support and easy-to-use one line commands it can take care of your **emails**, **social accounts**, **calls**, **To-do tasks** , **News & Weather Info** etc. 
+OfficeBot employs APIs like-
+ - Twilio
+ - Google
+ - OpenWeather API 
+ - Guardian API
+ - Twitter API
+ - Wikipedia API 
+and few others to perform your mundane day-to-day office tasks. 
+
+The OfficeBot uses basic NLP techniques and **AIML(Artificial Intelligence Markup Language)** to understand natural languages better.
 
 -
 ###How To Use : 
